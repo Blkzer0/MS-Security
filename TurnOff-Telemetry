@@ -1,0 +1,34 @@
+Step 1: Click on the Start button and then click on the Settings icon.
+Step 2: From the Settings window, click on the Privacy.
+Step 3: In the next window, click on Diagnostics & Feedback tab from the left panel and then set Diagnostics and usage data to Basic.
+Now, go to Activity history and turn off the options shown here. Uncheck the boxes for – Store my activity history on this device and Send my activity history to Microsoft.
+Now go to Inking & Typing personalization, here turn off the toggle switch for typing suggestions.
+Similarly, go to Speech and turn off the toggle switch for not giving any voice sample to Microsoft from time to time.
+Now under the General tab, turn off all the options that collect user data and send it to Microsoft.
+
+If you do not wish to provide any information to Microsoft, you can use the below steps to Disable Telemetry and Data Collection.
+Step 1; Type in Regedit into the Windows 10 search box and press enter. Alternatively,  press Windows Key + R to run command and type regedit and click on OK.
+Step 2: Navigate to the Following trees from the sideboard pane:"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection."
+Step 3: In the right panel, right-click in space, and go to New, select DWORD value (32-bit). Name it AllowTelemetry.
+Double click on the AllowTelemetry and set the value to 0 and click on OK.
+
+Once you have Disabled Telemetry and Data collection using the Registry Editor, you need to turn OFF “Connected User Experience” and “dmwappushsvc” services. 
+This is necessary to disable Telemetry on your Windows 10 computer fully. To do so, follow the steps below:
+Step 1: Press Windows + R keys to open the Run command window. On the Run command window, type services.msc and click on the OK button.
+Step 2: In the Services window, scroll down and double-click on Connected User Experiences and Telemetry.
+Step 3: On the next screen, disable Connected User Experiences and Telemetry by setting Startup Type to Disabled. Now click on Apply to make changes.
+Step 4: Now find another service named dmwappushsvc service in the Services window and double click on it.
+Step 5: Here, disable dmwappushsvc service by setting the Startup Type to Disable and click on Apply.
+
+Using Group Policy
+Step 1: Open Group Policy with the run command. Press Windows Key + R to open Run Command and type gpedit.msc. Click on OK or press Enter.
+Step 2: This opens a new window named Local Group Policy Editor. Here you can need to look for –
+"Computer Configuration> Administrative Templates> Windows Components> Data collection and Preview Builds."
+Step 3: Double click on the Data Collection and Preview Builds, and you will see options on the right pane. Now double click on Allow Telemetry.
+Step 4: Under the section Allow Telemetry, click on option Disabled. To apply the changes applied, click Apply.
+
+Using Task Scheduler
+
+Step 1: Open Start Menu and type Task Scheduler on the search bar. Click on the option to appear on the Menu.
+Step 2: In this Tab, Go to: "Task Scheduler Library>Microsoft>Windows>Customer Experience Improvement Program."
+Step 3: Right-click on the task named Consolidator and Disable it. Repeat the process with all other tasks mentioned in this section.
